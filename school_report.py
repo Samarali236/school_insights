@@ -86,3 +86,11 @@ for name in class_journal:
         gradescount+=1
     total=namescount*gradescount
 print(f"The total grades entered across the whole class is: {namescount} Students x {gradescount} grades entered={total} Grades ")
+
+#overall class average:
+overall_avg=[]
+for name in class_journal:
+   average=class_journal[name]["average"]
+   overall_avg.append(average)
+   overall_average=sum(overall_avg)/len(overall_avg)
+print(f"The overall class average is : {overall_average}")
