@@ -41,3 +41,28 @@ for name in class_journal:
          student_maxavg=name
 print(f"The students with the Highest average is {student_maxavg} with an average of {max_avg}")
 
+#most consistent
+diff_list=[]
+name_list=[]
+const_student=""
+for name in class_journal:
+    grades=class_journal[name]["grades"]
+    max_grade=grades[0]
+    min_grade=grades[0]
+    for i in range(1,len(grades)):
+        if max_grade<grades[i]:
+            max_grade=grades[i]
+        elif min_grade>grades[i]:
+            min_grade=grades[i]
+    difference=max_grade-min_grade
+    diff_list.append(difference)
+    name_list.append(name)
+
+min_diff=diff_list[0]
+const_student=name_list[0]
+for i in range(1,len(diff_list)):
+    if min_diff>diff_list[i]:
+        min_diff=diff_list[i]
+        const_student=name_list[i]
+print(f"The List of grade Differences is {diff_list}")
+print(f"the student with the most consistent performance is :{const_student} ,grade difference:{min_diff}")
