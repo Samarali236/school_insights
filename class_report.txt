@@ -1,5 +1,5 @@
-The students with the Highest average is Jana with an average of 97.0
-The List of grade Differences is [5, 11, 6, 13] the student with the most consistent performance is :Layla ,grade difference:5
+The students with the Highest average is Jana with an average of 97.5
+The List of grade Differences is [7, 11, 6, 16] the student with the most consistent performance is :Jana ,grade difference:6
 The list of students who had at least one grade below 70 is : ['Ziad']
-The total grades entered across the whole class is: 12 Grades 
-The overall class average is : 83.25
+The total grades entered across the whole class is: 15 Grades 
+The overall class average is : 83.625
