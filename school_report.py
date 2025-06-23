@@ -39,7 +39,7 @@ for name in class_journal:
     if average>max_avg:
          max_avg=average
          student_maxavg=name
-print(f"The students with the Highest average is {student_maxavg} with an average of {max_avg}")
+output1=f"The students with the Highest average is {student_maxavg} with an average of {max_avg}"
 
 #most consistent
 diff_list=[]
@@ -64,8 +64,7 @@ for i in range(1,len(diff_list)):
     if min_diff>diff_list[i]:
         min_diff=diff_list[i]
         const_student=name_list[i]
-print(f"The List of grade Differences is {diff_list}")
-print(f"the student with the most consistent performance is :{const_student} ,grade difference:{min_diff}")
+output2=f"The List of grade Differences is {diff_list} the student with the most consistent performance is :{const_student} ,grade difference:{min_diff}"
 
 #student who had at least one grade below 70
 below70_student=[]
@@ -74,7 +73,7 @@ for name in class_journal:
     for i in range(len(grades)):
         if grades[i]<70:
             below70_student.append(name)
-print(f"The list of students who had at least one grade below 70 is : {below70_student}")
+output3=f"The list of students who had at least one grade below 70 is : {below70_student}"
 
 #total grades were entered across the whole class:
 gradescount=0
@@ -85,7 +84,7 @@ for name in class_journal:
     for grade in grades:
         gradescount+=1
     total=namescount*gradescount
-print(f"The total grades entered across the whole class is: {namescount} Students x {gradescount} grades entered={total} Grades ")
+output4=f"The total grades entered across the whole class is: {namescount} Students x {gradescount} grades entered= {total} Grades "
 
 #overall class average:
 overall_avg=[]
@@ -93,4 +92,20 @@ for name in class_journal:
    average=class_journal[name]["average"]
    overall_avg.append(average)
    overall_average=sum(overall_avg)/len(overall_avg)
-print(f"The overall class average is : {overall_average}")
+output5=f"The overall class average is : {overall_average}"
+
+#generating a text file having the requirment
+print(output1)
+print(output2)
+print(output3)
+print(output4)
+print(output5)
+
+with open("class_report.txt", "w") as f:
+    f.write(output1 + "\n")
+    f.write(output2 + "\n")
+    f.write(output3 + "\n")
+    f.write(output4 + "\n")
+    f.write(output5 + "\n")
+
+
