@@ -76,15 +76,7 @@ for name in class_journal:
 output3=f"The list of students who had at least one grade below 70 is : {below70_student}"
 
 #total grades were entered across the whole class:
-gradescount=0
-namescount=0
-for name in class_journal:
-    grades=class_journal[name]["grades"]
-    namescount+=1
-    for grade in grades:
-        gradescount+=1
-    total=namescount*gradescount
-output4=f"The total grades entered across the whole class is: {namescount} Students x {gradescount} grades entered= {total} Grades "
+output4=f"The total grades entered across the whole class is: {len(records)} Grades "
 
 #overall class average:
 overall_avg=[]
