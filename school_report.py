@@ -75,3 +75,14 @@ for name in class_journal:
         if grades[i]<70:
             below70_student.append(name)
 print(f"The list of students who had at least one grade below 70 is : {below70_student}")
+
+#total grades were entered across the whole class:
+gradescount=0
+namescount=0
+for name in class_journal:
+    grades=class_journal[name]["grades"]
+    namescount+=1
+    for grade in grades:
+        gradescount+=1
+    total=namescount*gradescount
+print(f"The total grades entered across the whole class is: {namescount} Students x {gradescount} grades entered={total} Grades ")
