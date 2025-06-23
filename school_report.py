@@ -66,3 +66,12 @@ for i in range(1,len(diff_list)):
         const_student=name_list[i]
 print(f"The List of grade Differences is {diff_list}")
 print(f"the student with the most consistent performance is :{const_student} ,grade difference:{min_diff}")
+
+#student who had at least one grade below 70
+below70_student=[]
+for name in class_journal:
+    grades=class_journal[name]["grades"]
+    for i in range(len(grades)):
+        if grades[i]<70:
+            below70_student.append(name)
+print(f"The list of students who had at least one grade below 70 is : {below70_student}")
