@@ -4,12 +4,27 @@ records = [
 ["Jana", 94], ["Ziad", 75]
 ]
 
+#Rebuilding the journal:
+
 class_journal={}
 
 for name, grade in records:
     if name in class_journal:
         class_journal[name].append(grade)
     else:
-        class_journal[name]=[]
-        class_journal[name].append(grade)
-print(class_journal)
+        class_journal[name]=[grade]
+        
+        
+#The basic Report:
+
+def find_avg():
+    for name in class_journal:
+        grade=class_journal[name]
+        avg=sum(grade)/len(grade)
+        class_journal[name] = {
+        "grades": grade,
+        "average": round(avg,2)
+    }  
+        print(f"The Data List of: {name} is :{class_journal[name]}, The Average is : {round(avg,2)}")
+      
+find_avg()
