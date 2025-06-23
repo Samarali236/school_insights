@@ -14,7 +14,7 @@ for name, grade in records:
     else:
         class_journal[name]=[grade]
         
-        
+
 #The basic Report:
 
 def find_avg():
@@ -28,3 +28,16 @@ def find_avg():
         print(f"The Data List of: {name} is :{class_journal[name]}, The Average is : {round(avg,2)}")
       
 find_avg()
+
+#Deeper Analysis
+
+#highest average
+max_avg=0
+student_maxavg=""
+for name in class_journal:
+    average=class_journal[name]["average"]
+    if average>max_avg:
+         max_avg=average
+         student_maxavg=name
+print(f"The students with the Highest average is {student_maxavg} with an average of {max_avg}")
+
